@@ -54,8 +54,7 @@
     <!-- USP Section -->
     <section id="usp" class="py-5 bg-dark text-white">
         <div class="container text-center">
-            <h2>Our Unique Selling Points</h2>
-            <p>Why Choose Bohemian Excellence Academy?</p>
+            <h2>Why Choose Bohemian Excellence Academy?</h2>
             <div class="row">
                 <div class="col-md-4">
                     <h4>Global Curricula</h4>
