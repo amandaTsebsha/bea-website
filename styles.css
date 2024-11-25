@@ -1,120 +1,180 @@
-/* General Styles */
+/* General Styling */
 body {
     font-family: 'Arial', sans-serif;
-    line-height: 1.6;
+    margin: 0;
+    padding: 0;
     color: #333;
 }
 
-/* Header */
-header {
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+h2, h4 {
+    color: #2C3E50;
+}
+
+/* Navigation Bar */
+.navbar {
+    background-color: #343A40;
+}
+
+.navbar-brand {
+    font-size: 1.8rem;
+    color: #fff !important;
+    font-weight: bold;
+}
+
+.navbar-nav .nav-link {
+    font-size: 1.1rem;
+    padding: 12px 15px;
+    color: #fff;
+}
+
+.navbar-nav .nav-link:hover {
+    background-color: #555;
+    border-radius: 5px;
 }
 
 /* Hero Section */
 #home {
-    background: url('assets/hero-bg.jpg') no-repeat center center/cover;
-    color: #fff;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+    background: url('images/graduation.jpg') no-repeat center center/cover;
+    color: white;
+    padding: 60px 0;
 }
 
 #home h2 {
     font-size: 3rem;
-    margin-bottom: 1rem;
+    margin-bottom: 20px;
 }
 
-#home .btn {
-    margin-top: 1rem;
+#home p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+#home .btn-primary {
+    font-size: 1.1rem;
+    padding: 12px 25px;
+    background-color: #17a2b8;
+    border: none;
+    border-radius: 5px;
+}
+
+#home .btn-primary:hover {
+    background-color: #138496;
 }
 
 /* About Section */
 #about {
-    background-color: #f8f9fa;
+    background-color: #f9f9f9;
+    padding: 50px 0;
 }
 
-#about h2 {
-    margin-bottom: 1rem;
+#about p {
+    font-size: 1.1rem;
+    line-height: 1.6;
 }
 
 /* Courses Section */
+#courses {
+    background-color: #f1f1f1;
+    padding: 50px 0;
+}
+
 #courses .row {
-    margin-top: 1.5rem;
+    margin-top: 30px;
+}
+
+#courses .col-md-4 {
+    margin-bottom: 30px;
 }
 
 #courses h4 {
-    margin-bottom: 0.5rem;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+#courses p {
+    font-size: 1.1rem;
+    color: #555;
 }
 
 /* FAQ Section */
-#faq .accordion-item {
-    border: none;
-    margin-bottom: 1rem;
+#faq {
+    background-color: #fff;
+    padding: 50px 0;
+}
+
+.accordion-button {
+    font-size: 1.2rem;
+    padding: 10px 20px;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: #17a2b8;
+    color: white;
+}
+
+.accordion-body {
+    font-size: 1.1rem;
+    color: #333;
 }
 
 /* Contact Section */
 #contact {
-    background-color: #f8f9fa;
+    background-color: #f9f9f9;
+    padding: 50px 0;
 }
 
-#contact h2 {
-    margin-bottom: 1rem;
-}
-
-#contact .form-control {
-    border-radius: 0;
+#contact form .form-control {
+    font-size: 1rem;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
 }
 
 #contact button {
+    font-size: 1.1rem;
+    padding: 12px 25px;
     background-color: #28a745;
     border: none;
+    border-radius: 5px;
 }
 
 #contact button:hover {
     background-color: #218838;
-    color: #fff;
+}
+
+/* Testimonials Section */
+#testimonials {
+    background-color: #f1f1f1;
+    padding: 50px 0;
 }
 
 /* Footer */
 footer {
-    background-color: #222;
-    color: #aaa;
+    background-color: #343A40;
+    color: #fff;
+    padding: 15px 0;
 }
 
 footer p {
     margin: 0;
-}
-
-/* Navigation Styles */
-.nav-link {
-    transition: color 0.3s ease-in-out;
-}
-
-.nav-link:hover {
-    color: #ffc107;
+    font-size: 1rem;
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     #home h2 {
         font-size: 2rem;
     }
 
-    header {
-        padding: 10px;
+    #home p {
+        font-size: 1rem;
     }
 
-    .nav {
-        flex-direction: column;
+    .navbar-nav .nav-link {
+        font-size: 1rem;
     }
 
-    .nav-item {
-        margin-bottom: 5px;
+    .container {
+        padding: 0 15px;
     }
 }
