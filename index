@@ -174,10 +174,52 @@
     </section>
 
     <!-- Testimonials Section -->
-    <section id="testimonials" class="py-5 bg-light">
-        <div class="container text-center">
-            <h2>What Our Students Say</h2>
-            <p>Our graduates are making a difference in the world, thanks to their education at Bohemian Excellence Academy.</p>
-            <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="py-5 bg-light">
+            <div class="container text-center">
+                <h2>What Our Students Say</h2>
+                <p>Our graduates are making a difference in the world, thanks to their education at Bohemian Excellence Academy.</p>
+                <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <p>"The curriculum at Bohemian Excellence Academy gave me the global perspective I needed to succeed in the tech industry!"</p>
+                            <footer>- Student Name, Graduate</footer>
+                        </div>
+                        <div class="carousel-item">
+                            <p>"The hands-on experience and mentorship I received set me up for success in launching my own startup."</p>
+                            <footer>- Student Name, Entrepreneur</footer>
+                        </div>
+                        <div class="carousel-item">
+                            <p>"I gained invaluable skills that helped me transition seamlessly into the workforce, thanks to the academy's focus on employability."</p>
+                            <footer>- Student Name, Professional</footer>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+    
+        <!-- Footer Section -->
+        <footer class="bg-dark text-white py-3 text-center">
+            <p>&copy; 2024 Bohemian Excellence Academy. All rights reserved.</p>
+            <p>
+                <a href="https://www.facebook.com/bohemianexcellence" target="_blank" class="text-white me-2">Facebook</a>
+                <a href="https://www.instagram.com/bohemianexcellence" target="_blank" class="text-white me-2">Instagram</a>
+                <a href="https://www.linkedin.com/company/bohemianexcellence" target="_blank" class="text-white me-2">LinkedIn</a>
+                <a href="mailto:info@bohemianexcellence.ac.za" class="text-white">Contact Us</a>
+            </p>
+        </footer>
+    
+        <!-- Bootstrap JS and Dependencies -->
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+    </body>
+    </html>
+    
