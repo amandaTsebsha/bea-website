@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bohemian Excellence Academy</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header class="bg-dark p-3">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Bohemian Excellence Academy</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#home">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#courses">Courses</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#employment">Employability</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home">
+        <div class="container text-center">
+            <h2>Welcome to Bohemian Excellence Academy</h2>
+            <p>Your Pathway to a World-Class Education</p>
+            <p><strong>Leveraging top-tier international curricula from Japan, Finland, Germany, and Singapore to bridge South Africa's educational gap.</strong></p>
+            <a href="#courses" class="btn btn-primary">Explore Courses</a>
+        </div>
+    </section>
+    
+    <!----Empower Section-->
+
+    <section id="employment" class="py-5">
+        <div class="container text-center">
+            <h2>Education with Impact</h2>
+            <p>Bohemian Excellence Academy is not just about education; it's about empowering you for success. We equip our students with the skills, knowledge, and experience needed to thrive in a global, competitive workforce.</p>
+            <p><strong>Our programs are designed to make you employable:</strong></p>
+            <ul>
+                <li>Hands-on learning and internships</li>
+                <li>Collaboration with industry leaders</li>
+                <li>Global perspectives to excel in any professional environment</li>
+            </ul>
+            <p>Prepare yourself for more than just a job—prepare for a fulfilling, successful career.</p>
+        </div>
+    </section>
+    
+
+    <!-- About Section -->
+    <section id="about" class="py-5">
+        <div class="container text-center">
+            <h2>About Us</h2>
+            <p><strong>Bohemian Excellence Academy</strong> provides a world-class education rooted in the best educational frameworks from Japan, Finland, Germany, and Singapore.</p>
+            <p>We focus on academic excellence, leadership development, and techpreneurship to prepare students for the challenges of a global workforce.</p>
+            <p>Our hands-on, practical curriculum ensures that students not only learn but also apply their knowledge to real-world situations, developing the skills needed to succeed in any career.</p>
+        </div>
+    </section>
+    
+
+    <!-- Courses Section -->
+    <section id="courses" class="py-5 bg-light">
+        <div class="container text-center">
+            <h2>Our Courses</h2>
+            <p>Our programs are designed to provide a top-tier education aligned with international standards, ensuring our students are globally competitive.</p>
+            <div class="row">
+                <div class="col-md-4">
+                    <h4>Programming & Tech Courses</h4>
+                    <p>Learn from international curricula used in countries like Japan and Finland, providing you with in-demand tech skills.</p>
+                </div>
+                <div class="col-md-4">
+                    <h4>Business & Entrepreneurship</h4>
+                    <p>Develop leadership and entrepreneurial skills, inspired by the frameworks from Singapore and Germany, to make an impact in the business world.</p>
+                </div>
+                <div class="col-md-4">
+                    <h4>Leadership Development</h4>
+                    <p>Our courses foster leadership and soft skills, essential for the workplace, with mentorship opportunities to nurture future leaders.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-5">
+        <div class="container">
+            <h2 class="text-center">Frequently Asked Questions</h2>
+            <div class="accordion" id="faqAccordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            What courses do you offer?
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            We offer a variety of courses ranging from programming, data science, business training, and more.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            How can I enroll in a course?
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            You can enroll by clicking on the "Explore Courses" button and selecting the course you're interested in.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5 bg-light">
+        <div class="container text-center">
+            <h2>Contact Us</h2>
+            <p>If you have any questions or inquiries, feel free to reach out to us.</p>
+            <form>
+                <div class="mb-3">
+                    <input type="text" class="form-control" id="name" placeholder="Your Name">
+                </div>
+                <div class="mb-3">
+                    <input type="email" class="form-control" id="email" placeholder="Your Email">
+                </div>
+                <div class="mb-3">
+                    <textarea class="form-control" id="message" rows="3" placeholder="Your Message"></textarea>
+                </div>
+                <button type="submit" class="btn btn-success">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <section id="testimonials" class="py-5 bg-light">
+        <div class="container text-center">
+            <h2>What Our Students Say</h2>
+            <p>Our graduates are making a difference in the world, thanks to their education at Bohemian Excellence Academy.</p>
+            <!-- Add testimonials here -->
+        </div>
+    </section>
+    
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-3 text-center">
+        <p>&copy; 2024 Bohemian Excellence Academy. All rights reserved.</p>
+    </footer>
+
+    <!-- Bootstrap JS and Dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
