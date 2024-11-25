@@ -1,0 +1,120 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Header */
+header {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Hero Section */
+#home {
+    background: url('assets/hero-bg.jpg') no-repeat center center/cover;
+    color: #fff;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#home h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+#home .btn {
+    margin-top: 1rem;
+}
+
+/* About Section */
+#about {
+    background-color: #f8f9fa;
+}
+
+#about h2 {
+    margin-bottom: 1rem;
+}
+
+/* Courses Section */
+#courses .row {
+    margin-top: 1.5rem;
+}
+
+#courses h4 {
+    margin-bottom: 0.5rem;
+}
+
+/* FAQ Section */
+#faq .accordion-item {
+    border: none;
+    margin-bottom: 1rem;
+}
+
+/* Contact Section */
+#contact {
+    background-color: #f8f9fa;
+}
+
+#contact h2 {
+    margin-bottom: 1rem;
+}
+
+#contact .form-control {
+    border-radius: 0;
+}
+
+#contact button {
+    background-color: #28a745;
+    border: none;
+}
+
+#contact button:hover {
+    background-color: #218838;
+    color: #fff;
+}
+
+/* Footer */
+footer {
+    background-color: #222;
+    color: #aaa;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Navigation Styles */
+.nav-link {
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+    color: #ffc107;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #home h2 {
+        font-size: 2rem;
+    }
+
+    header {
+        padding: 10px;
+    }
+
+    .nav {
+        flex-direction: column;
+    }
+
+    .nav-item {
+        margin-bottom: 5px;
+    }
+}
