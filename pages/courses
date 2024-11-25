@@ -1,0 +1,29 @@
+<section id="courses" class="py-5">
+    <div class="container text-center">
+        <h2 class="section-title">Our Courses</h2>
+        <p class="section-description">Our programs are designed to provide a top-tier education aligned with international standards, ensuring our students are globally competitive.</p>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="service-box">
+                    <h4>Programming & Tech Courses</h4>
+                    <p>Learn from international curricula used in countries like Japan and Finland, providing you with in-demand tech skills.</p>
+                    <a href="#" class="btn btn-primary">Learn More</a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="service-box">
+                    <h4>Business & Entrepreneurship</h4>
+                    <p>Develop leadership and entrepreneurial skills, inspired by the frameworks from Singapore and Germany, to make an impact in the business world.</p>
+                    <a href="#" class="btn btn-primary">Learn More</a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="service-box">
+                    <h4>Leadership Development</h4>
+                    <p>Our courses foster leadership and soft skills, essential for the workplace, with mentorship opportunities to nurture future leaders.</p>
+                    <a href="#" class="btn btn-primary">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
