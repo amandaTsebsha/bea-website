@@ -5,7 +5,45 @@ document.addEventListener("DOMContentLoaded", () => {
     const navLink = document.querySelectorAll(".nav-link");
 
     const defaultPage = "home";
-    
+
+    const loadPage = async (page) => {
+
+        try{
+            
+            const response = await fetch('pages/${page}.html');
+            if (!response.ok) throw new Error("BEA DIGI-DEMY did not understand your page request!");
+            const content = await response.text();
+
+            mainContainer.innerHTML = content;
+
+            loadCSS('css/${page}.css');
+
+        }catch (error) {
+            console.error("Error loading page:", error); 
+
+            mainContainer.innerHTML = "<p>Sorry, I couldn't load the requested page.</p>";
+        }
+
+        const loadCSS = (cssFile) => {
+
+            const existingLink = document.querySelector("#dynamic-css");
+            if (existingLink) existingLink.remove();
+
+            const link = document.createElement("link");
+            link.rel = "stylesheet";
+            link.type = "text/css";
+            link.id = "dynamic-css";
+            link.href = cssFile;
+
+            document.head.appendChild(link);
+        };
+
+
+        
+
+    };
+}
+
 
 // const contentDiv = document.getElementById('content');
 
