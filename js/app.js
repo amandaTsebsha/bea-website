@@ -1,96 +1,66 @@
 document.addEventListener("DOMContentLoaded", () => {
-
     const mainContainer = document.querySelector("#main-content");
-
-    const navLink = document.querySelectorAll(".nav-link");
-
+    const navLinks = document.querySelectorAll(".nav-link");
     const defaultPage = "home";
 
-    const loadPage = async (page) => {
+    // Function to dynamically load CSS
+    const loadCSS = (cssFile) => {
+        const existingLink = document.querySelector("#dynamic-css");
+        if (existingLink) existingLink.remove();
 
-        try{
-            
-            const response = await fetch('pages/${page}.html');
-            if (!response.ok) throw new Error("BEA DIGI-DEMY did not understand your page request!");
-            const content = await response.text();
+        const link = document.createElement("link");
+        link.rel = "stylesheet";
+        link.type = "text/css";
+        link.id = "dynamic-css";
+        link.href = cssFile;
 
-            mainContainer.innerHTML = content;
-
-            loadCSS('css/${page}.css');
-
-        }catch (error) {
-            console.error("Error loading page:", error); 
-
-            mainContainer.innerHTML = "<p>Sorry, I couldn't load the requested page.</p>";
-        }
-
-        const loadCSS = (cssFile) => {
-
-            const existingLink = document.querySelector("#dynamic-css");
-            if (existingLink) existingLink.remove();
-
-            const link = document.createElement("link");
-            link.rel = "stylesheet";
-            link.type = "text/css";
-            link.id = "dynamic-css";
-            link.href = cssFile;
-
-            document.head.appendChild(link);
-        };
-
-
-        const handleNav = (event) => {
-            event.preventDefault();
-
-            const targetPage = event.target.getAttribute("href").replace("#", "");
-
-            loadPage(targetPage);
-
-            updateActiveLink(event.target);
-
+        document.head.appendChild(link);
     };
 
+    // Function to dynamically load pages
+    const loadPage = async (page) => {
+        try {
+            const response = await fetch(`pages/${page}.html`);
+            if (!response.ok) throw new Error("Failed to load the requested page!");
 
+            const content = await response.text();
+            mainContainer.innerHTML = content;
+
+            loadCSS(`css/${page}.css`);
+        } catch (error) {
+            console.error("Error loading page:", error);
+            mainContainer.innerHTML = `<p>Sorry, we couldn't load the requested page. Please try again later.</p>`;
+        }
+    };
+
+    // Update active link styling
     const updateActiveLink = (activeLink) => {
-        navLink.forEach((link) => {
+        navLinks.forEach((link) => {
             link.classList.remove("active");
         });
         activeLink.classList.add("active");
-    
     };
 
-    navLink.forEach((link) => {
+    // Handle navigation clicks
+    const handleNav = (event) => {
+        event.preventDefault();
+        const targetPage = event.target.getAttribute("href").replace("#", "");
+        loadPage(targetPage);
+        updateActiveLink(event.target);
+    };
+
+    // Attach event listeners to navigation links
+    navLinks.forEach((link) => {
         link.addEventListener("click", handleNav);
     });
 
+    // Load initial page based on URL hash or default page
+    const initialPage = window.location.hash.replace("#", "") || defaultPage;
+    loadPage(initialPage);
 
-// const contentDiv = document.getElementById('content');
-
-// // Function to load a page dynamically
-// async function loadPage(page) {
-//     const res = await fetch(`pages/${page}.html`);
-//     const html = await res.text();
-//     contentDiv.innerHTML = html;
-// }
-
-// // Handle navigation clicks
-// document.querySelectorAll('[data-link]').forEach(link => {
-//     link.addEventListener('click', (event) => {
-//         event.preventDefault();
-//         const page = event.target.getAttribute('data-link');
-//         history.pushState(null, null, `#${page}`);
-//         loadPage(page);
-//     });
-// });
-
-// // Load initial page on page load or refresh
-// window.addEventListener('load', () => {
-//     const page = location.hash.slice(1) || 'home';
-//     loadPage(page);
-// });
-
-// // Handle browser navigation buttons
-// window.addEventListener('popstate', () => {
-//     const page = location.hash.slice(1) || 'home';
-//     loadPage(page);
-// });
+    // Update active link for the initial page
+    const initialLink = Array.from(navLinks).find(
+        (link) => link.getAttribute("href").replace("#", "") === initialPage
+    );
+    if (initialLink) updateActiveLink(initialLink);
+});
