@@ -1,30 +1,39 @@
-const contentDiv = document.getElementById('content');
+document.addEventListener("DOMContentLoaded", () => {
 
-// Function to load a page dynamically
-async function loadPage(page) {
-    const res = await fetch(`pages/${page}.html`);
-    const html = await res.text();
-    contentDiv.innerHTML = html;
-}
+    const mainContainer = document.querySelector("#main-content");
 
-// Handle navigation clicks
-document.querySelectorAll('[data-link]').forEach(link => {
-    link.addEventListener('click', (event) => {
-        event.preventDefault();
-        const page = event.target.getAttribute('data-link');
-        history.pushState(null, null, `#${page}`);
-        loadPage(page);
-    });
-});
+    const navLink = document.querySelectorAll(".nav-link");
 
-// Load initial page on page load or refresh
-window.addEventListener('load', () => {
-    const page = location.hash.slice(1) || 'home';
-    loadPage(page);
-});
+    const defaultPage = "home";
+    
 
-// Handle browser navigation buttons
-window.addEventListener('popstate', () => {
-    const page = location.hash.slice(1) || 'home';
-    loadPage(page);
-});
+// const contentDiv = document.getElementById('content');
+
+// // Function to load a page dynamically
+// async function loadPage(page) {
+//     const res = await fetch(`pages/${page}.html`);
+//     const html = await res.text();
+//     contentDiv.innerHTML = html;
+// }
+
+// // Handle navigation clicks
+// document.querySelectorAll('[data-link]').forEach(link => {
+//     link.addEventListener('click', (event) => {
+//         event.preventDefault();
+//         const page = event.target.getAttribute('data-link');
+//         history.pushState(null, null, `#${page}`);
+//         loadPage(page);
+//     });
+// });
+
+// // Load initial page on page load or refresh
+// window.addEventListener('load', () => {
+//     const page = location.hash.slice(1) || 'home';
+//     loadPage(page);
+// });
+
+// // Handle browser navigation buttons
+// window.addEventListener('popstate', () => {
+//     const page = location.hash.slice(1) || 'home';
+//     loadPage(page);
+// });
