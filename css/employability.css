@@ -1,0 +1,47 @@
+/* Employability Section */
+#employability {
+    background-color: #e5f5f4;
+    padding: 70px 20px;
+    text-align: center;
+}
+
+#employability h2 {
+    font-size: 2.8rem;
+    color: #2c3e50;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+#employability .row {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+#employability .col {
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 30px;
+    width: 300px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+#employability .col:hover {
+    transform: scale(1.05);
+}
+
+#employability h4 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #008080;
+}
+
+#employability p {
+    font-size: 1.1rem;
+    color: #555555;
+}

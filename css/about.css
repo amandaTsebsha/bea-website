@@ -1,0 +1,36 @@
+/* About Section */
+#about {
+    background-color: #fff;
+    padding: 60px 20px;
+}
+
+#about h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #34495e; /* Dark teal-gray tone */
+}
+
+#about .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+#about .text-content {
+    flex: 1;
+    max-width: 50%;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #555;
+}
+
+#about img {
+    flex: 1;
+    max-width: 40%;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
