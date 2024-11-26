@@ -39,10 +39,29 @@ document.addEventListener("DOMContentLoaded", () => {
         };
 
 
-        
+        const handleNav = (event) => {
+            event.preventDefault();
+
+            const targetPage = event.target.getAttribute("href").replace("#", "");
+
+            loadPage(targetPage);
+
+            updateActiveLink(event.target);
 
     };
-}
+
+
+    const updateActiveLink = (activeLink) => {
+        navLink.forEach((link) => {
+            link.classList.remove("active");
+        });
+        activeLink.classList.add("active");
+    
+    };
+
+    navLink.forEach((link) => {
+        link.addEventListener("click", handleNav);
+    });
 
 
 // const contentDiv = document.getElementById('content');
