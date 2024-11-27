@@ -16,7 +16,7 @@
 #employability .row {
     display: flex;
     justify-content: space-around;
-    align-items: center;
+    align-items: ;
     gap: 20px;
     flex-wrap: wrap;
 }
